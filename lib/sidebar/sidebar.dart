@@ -26,6 +26,7 @@ class Sidebar extends StatelessWidget {
               Navigator.pop(context);
             },
           ),
+          Divider(),
           ListTile(
             trailing: Icon(Icons.archive),
             title: Text('Archive'),
@@ -35,14 +36,14 @@ class Sidebar extends StatelessWidget {
           ),
           ListTile(
             trailing: Icon(Icons.import_contacts),
-            title: Text('Import Contacts'),
+            title: Text('Contacts'),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
             trailing: Icon(Icons.group_add),
-            title: Text('Create Group'),
+            title: Text('Add Group'),
             onTap: () {
               Navigator.pop(context);
             },
@@ -54,12 +55,36 @@ class Sidebar extends StatelessWidget {
               Navigator.pop(context);
             },
           ),
+          Divider(),
           ListTile(
-            trailing: Icon(Icons.info),
+            trailing: Icon(Icons.mode_comment),
             title: Text('About'),
             onTap: () {
               Navigator.pop(context);
             },
+          ),
+          Column(
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    "Made with",
+                    style: TextStyle(color: Colors.black45),
+                  ),
+                  Icon(
+                    Icons.favorite,
+                    color: Colors.pinkAccent,
+                  ),
+                ],
+              ),
+              Center(
+                child: Text(
+                  "Abhijit Kar, 2018",
+                  style: TextStyle(color: Colors.black45),
+                ),
+              ),
+            ],
           ),
         ],
       ),
