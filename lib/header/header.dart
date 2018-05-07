@@ -10,19 +10,27 @@ class Header extends StatelessWidget {
         IconButton(
           icon: Icon(Icons.search),
           tooltip: 'Search',
-          onPressed: null,
+          onPressed: () => print("Search"),
         ),
         IconButton(
           icon: Icon(Icons.bookmark),
           tooltip: 'Bookmarks',
-          onPressed: null,
+          onPressed: () => print("Bookmarks"),
         ),
         IconButton(
           icon: Icon(Icons.more_vert),
           tooltip: 'More',
-          onPressed: null,
+          onPressed: () => print("More"),
         ),
       ],
+      bottom: TabBar(
+        indicatorColor: Colors.white,
+        tabs: <Widget>[
+          Tab(icon: Icon(Icons.camera)),
+          Tab(text: "Shared With"),
+          Tab(icon: Icon(Icons.favorite)),
+        ],
+      ),
     );
   }
 }

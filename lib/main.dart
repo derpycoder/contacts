@@ -10,7 +10,10 @@ void main() => runApp(MaterialApp(
         accentColor: Colors.pinkAccent,
       ),
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
+      home: DefaultTabController(
+        length: 3,
+        child: MyHomePage(),
+      ),
     ));
 
 class MyHomePage extends StatelessWidget {
@@ -18,12 +21,17 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: Header().build(context),
-        body: Center(
-          child: Text("Soon to be filled with Contacts!"),
+        body: TabBarView(
+          physics: BouncingScrollPhysics(),
+          children: [
+            Center(child: Text("Scan QR Code")),
+            Center(child: Text("Your Contacts Shared With")),
+            Center(child: Text("Favorites")),
+          ],
         ),
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
-          onPressed: null,
+          onPressed: () => print("Yay"),
         ),
         drawer: Sidebar());
   }
