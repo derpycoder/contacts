@@ -20,7 +20,7 @@ class Sidebar extends StatelessWidget {
             ),
           ),
           ListTile(
-            trailing: Icon(Icons.account_circle),
+            leading: Icon(Icons.account_circle),
             title: Text('Profile'),
             onTap: () {
               Navigator.pop(context);
@@ -28,28 +28,29 @@ class Sidebar extends StatelessWidget {
           ),
           Divider(),
           ListTile(
-            trailing: Icon(Icons.archive),
+            leading: Icon(Icons.archive),
             title: Text('Archive'),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
-            trailing: Icon(Icons.import_contacts),
+            leading: Icon(Icons.import_contacts),
             title: Text('Contacts'),
+            trailing: Icon(Icons.offline_pin),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
-            trailing: Icon(Icons.group_add),
+            leading: Icon(Icons.group_add),
             title: Text('Add Group'),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
-            trailing: Icon(Icons.settings),
+            leading: Icon(Icons.settings),
             title: Text('Settings'),
             onTap: () {
               Navigator.pop(context);
@@ -57,7 +58,7 @@ class Sidebar extends StatelessWidget {
           ),
           Divider(),
           ListTile(
-            trailing: Icon(Icons.mode_comment),
+            leading: Icon(Icons.mode_comment),
             title: Text('About'),
             onTap: () {
               Navigator.pop(context);
