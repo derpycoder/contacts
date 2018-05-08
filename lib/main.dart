@@ -11,7 +11,7 @@ void main() => runApp(MaterialApp(
       ),
       debugShowCheckedModeBanner: false,
       home: DefaultTabController(
-        length: 3,
+        length: 5,
         child: MyHomePage(),
       ),
     ));
@@ -24,9 +24,11 @@ class MyHomePage extends StatelessWidget {
         body: TabBarView(
           physics: BouncingScrollPhysics(),
           children: [
-            Center(child: Text("Scan QR Code")),
-            Center(child: Text("Your Contacts Shared With")),
+            Center(child: Text("Home Page")),
             Center(child: Text("Favorites")),
+            Center(child: Text("Contact Cards")),
+            Center(child: Text("Groups")),
+            Center(child: Text("Archives")),
           ],
         ),
         floatingActionButton: FloatingActionButton(
