@@ -11,17 +11,18 @@ class Sidebar extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.green[300],
             ),
-            accountEmail: Text("reachme@abhijit-kar.com"),
-            accountName: Text("Abhijit Kar"),
+            accountEmail: Text("john@doe.com"),
+            accountName: Text("John Doe"),
             currentAccountPicture: CircleAvatar(
               backgroundColor: Colors.green[200],
-              backgroundImage: NetworkImage(
-                  "https://www.abhijit-kar.com/assets/images/abhijit-kar.png"),
+              backgroundImage:
+                  AssetImage('assets/images/placeholders/green_male_avatar.png'),
             ),
           ),
           ListTile(
             leading: Icon(Icons.account_circle),
             title: Text('Profile'),
+            trailing: Icon(Icons.edit),
             onTap: () {
               Navigator.pop(context);
             },
