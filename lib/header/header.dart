@@ -29,7 +29,7 @@ class Header extends StatelessWidget {
       bottom: TabBar(
         indicatorColor: Colors.white,
         tabs: <Widget>[
-          Tab(icon: Icon(Icons.home)),
+          Tab(icon: Icon(Icons.account_circle)),
           Tab(icon: Icon(Icons.favorite)),
           Tab(icon: Icon(Icons.contacts)),
           Tab(icon: Icon(Icons.group)),

@@ -14,7 +14,7 @@ class Sidebar extends StatelessWidget {
             accountEmail: Text("john@doe.com"),
             accountName: Text("John Doe"),
             currentAccountPicture: CircleAvatar(
-              backgroundColor: Colors.green[200],
+              backgroundColor: Colors.green[50],
               backgroundImage:
                   AssetImage('assets/images/placeholders/green_male_avatar.png'),
             ),

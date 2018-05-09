@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import './header/header.dart';
 import './sidebar/sidebar.dart';
 
+import './contacts/contact_group/contact_group.dart';
+
 void main() => runApp(MaterialApp(
       title: 'Contacts 2.0',
       theme: ThemeData(
@@ -12,6 +14,7 @@ void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       home: DefaultTabController(
         length: 5,
+        initialIndex: 2,
         child: MyHomePage(),
       ),
     ));
@@ -24,11 +27,25 @@ class MyHomePage extends StatelessWidget {
         body: TabBarView(
           physics: BouncingScrollPhysics(),
           children: [
-            Center(child: Text("Home Page")),
+            Center(child: Text("Profile")),
             Center(child: Text("Favorites")),
-            Center(child: Text("Contact Cards")),
+            Container(
+              child: CustomScrollView(
+                scrollDirection: Axis.vertical,
+                slivers: <Widget>[
+                  SliverFixedExtentList(
+                    itemExtent: 160.0,
+                    delegate: SliverChildBuilderDelegate(
+                      (BuildContext context, int index) {
+                        return ContactGroup();
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
             Center(child: Text("Groups")),
-            Center(child: Text("Archives")),
+            Center(child: Text("Trash Can")),
           ],
         ),
         floatingActionButton: FloatingActionButton(
