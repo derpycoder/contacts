@@ -11,7 +11,6 @@ void main() => runApp(MaterialApp(
         primaryColor: Colors.grey[900],
         accentColor: Colors.pinkAccent,
       ),
-      debugShowCheckedModeBanner: false,
       home: DefaultTabController(
         length: 5,
         initialIndex: 2,
