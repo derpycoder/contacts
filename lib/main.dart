@@ -43,7 +43,7 @@ class MyHomePage extends StatelessWidget {
                     ),
                   ),
                   SliverFixedExtentList(
-                    itemExtent: 160.0,
+                    itemExtent: 145.0,
                     delegate: SliverChildBuilderDelegate(
                       (BuildContext context, int index) {
                         return ContactGroup();

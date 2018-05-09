@@ -5,7 +5,7 @@ class ContactGroup extends StatelessWidget {
   @override
   Container build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 10.0),
+      margin: EdgeInsets.only(top: 5.0),
       child: Card(
         child: ListView.builder(
           padding: EdgeInsets.symmetric(vertical: 10.0),
