@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './shared/values/colors.dart';
+
 class Sidebar extends StatelessWidget {
   @override
   Drawer build(BuildContext context) {
@@ -9,12 +11,12 @@ class Sidebar extends StatelessWidget {
         children: <Widget>[
           UserAccountsDrawerHeader(
             decoration: BoxDecoration(
-              color: Colors.green[300],
+              color: rawGreen,
             ),
             accountEmail: Text("john@doe.com"),
             accountName: Text("John Doe"),
             currentAccountPicture: CircleAvatar(
-              backgroundColor: Colors.green[50],
+              backgroundColor: rawGreen,
               backgroundImage:
                   AssetImage('assets/images/placeholders/green_male_avatar.png'),
             ),
@@ -72,18 +74,18 @@ class Sidebar extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "Made with",
-                    style: TextStyle(color: Colors.black45),
+                    style: TextStyle(color: flaccidBlack),
                   ),
                   Icon(
                     Icons.favorite,
-                    color: Colors.pinkAccent,
+                    color: ripePink,
                   ),
                 ],
               ),
               Center(
                 child: Text(
                   "Abhijit Kar, 2018",
-                  style: TextStyle(color: Colors.black45),
+                  style: TextStyle(color: flaccidBlack),
                 ),
               ),
             ],

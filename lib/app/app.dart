@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import './scaffold.dart';
+import './home-page.dart';
+import './shared/values/colors.dart';
 
 class ContactsApp extends StatelessWidget {
   @override
@@ -8,14 +9,10 @@ class ContactsApp extends StatelessWidget {
     return MaterialApp(
       title: 'Contacts 2.0',
       theme: ThemeData(
-        primaryColor: Colors.grey[900],
-        accentColor: Colors.pinkAccent,
+        primaryColor: charcoalGrey,
+        accentColor: ripePink,
       ),
-      home: DefaultTabController(
-        length: 5,
-        initialIndex: 2,
-        child: ContactsScaffold(),
-      ),
+      home: HomePage(),
     );
   }
 }

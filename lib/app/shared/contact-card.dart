@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
+import './values/colors.dart';
+
 class Contact extends StatelessWidget {
   @override
   Container build(BuildContext context) {
@@ -12,7 +14,7 @@ class Contact extends StatelessWidget {
         children: <Widget>[
           CircleAvatar(
             radius: 40.0,
-            backgroundColor: Colors.green[50],
+            backgroundColor: ripeGreen,
             backgroundImage:
                 AssetImage('assets/images/placeholders/green_male_avatar.png'),
           ),

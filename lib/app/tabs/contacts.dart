@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+
 import '../shared/contacts-belt.dart';
+import '../shared/values/colors.dart';
 
 class ContactsTab extends StatelessWidget {
   @override
@@ -12,7 +14,7 @@ class ContactsTab extends StatelessWidget {
             leading: Icon(Icons.account_circle),
             pinned: true,
             expandedHeight: 250.0,
-            backgroundColor: Colors.pinkAccent,
+            backgroundColor: ripePink,
             flexibleSpace: FlexibleSpaceBar(
               title: Text('John Doe'),
             ),

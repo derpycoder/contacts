@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
+import './shared/values/colors.dart';
+
 class Header extends StatelessWidget {
   @override
   AppBar build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.green[300],
+      backgroundColor: rawGreen,
       title: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(30.0)),
-          color: Colors.white,
+          color: obviousWhite,
         ),
         child: TextField(
           decoration: InputDecoration(
@@ -27,7 +29,7 @@ class Header extends StatelessWidget {
         ),
       ],
       bottom: TabBar(
-        indicatorColor: Colors.white,
+        indicatorColor: obviousWhite,
         tabs: <Widget>[
           Tab(icon: Icon(Icons.account_circle)),
           Tab(icon: Icon(Icons.favorite)),
