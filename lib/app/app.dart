@@ -18,14 +18,7 @@ ThemeData _buildGuavaTheme(BuildContext context) {
   final ThemeData base = ThemeData.light();
 
   return base.copyWith(
-    accentColor: rawGreen,
-    scaffoldBackgroundColor: obviousWhite,
-    cardColor: obviousWhite,
-    buttonColor: rawGreen,
-    textSelectionColor: ripePink,
-    textSelectionHandleColor: ripeGreen,
-    buttonTheme: ButtonThemeData(
-      textTheme: ButtonTextTheme.accent,
-    ),
+    primaryColor: charcoalGrey,
+    accentColor: ripePink,
   );
 }

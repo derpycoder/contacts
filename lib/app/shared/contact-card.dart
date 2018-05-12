@@ -3,7 +3,7 @@ import 'package:english_words/english_words.dart';
 
 import './values/colors.dart';
 
-class Contact extends StatelessWidget {
+class ContactCard extends StatelessWidget {
   @override
   Container build(BuildContext context) {
     final wordPair = WordPair.random();

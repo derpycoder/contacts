@@ -12,7 +12,7 @@ class ContactBelt extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemCount: 10,
           itemBuilder: (BuildContext context, int index) {
-            return Contact();
+            return ContactCard();
           },
         ),
       ),

@@ -2,14 +2,26 @@ import 'package:flutter/material.dart';
 
 import './shared/values/colors.dart';
 
-AppBar header() {
-  return AppBar(
-    backgroundColor: rawGreen,
-    title: _searchBar(),
-    actions: <Widget>[
-      _shareContact(),
-    ],
-    bottom: _tabBar(),
+Widget header(Widget body) {
+  return NestedScrollView(
+    headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+      return <Widget>[
+        SliverAppBar(
+          snap: true,
+          backgroundColor: rawGreen,
+          title: _searchBar(),
+          forceElevated: innerBoxIsScrolled,
+          pinned: true,
+          floating: true,
+          bottom: _tabBar(),
+          actions: <Widget>[
+            _shareContact(),
+          ],
+          primary: true,
+        ),
+      ];
+    },
+    body: body,
   );
 }
 
