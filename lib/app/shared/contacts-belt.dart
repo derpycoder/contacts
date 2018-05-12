@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import './contact.dart';
+import './contact-card.dart';
 
-class ContactGroup extends StatelessWidget {
+class ContactBelt extends StatelessWidget {
   @override
   Container build(BuildContext context) {
     return Container(
