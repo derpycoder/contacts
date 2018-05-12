@@ -12,15 +12,17 @@ class HomePage extends StatelessWidget {
       initialIndex: 2,
       child: Scaffold(
         appBar: Header().build(context),
-        body: TabBarView(
-          physics: BouncingScrollPhysics(),
-          children: [
-            Center(child: Text("Profile")),
-            Center(child: Text("Favorites")),
-            ContactsTab(),
-            Center(child: Text("Groups")),
-            Center(child: Text("Trash Can")),
-          ],
+        body: SafeArea(
+          child: TabBarView(
+            physics: BouncingScrollPhysics(),
+            children: [
+              Center(child: Text("Profile")),
+              Center(child: Text("Favorites")),
+              ContactsTab(),
+              Center(child: Text("Groups")),
+              Center(child: Text("Trash Can")),
+            ],
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),

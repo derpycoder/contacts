@@ -8,11 +8,24 @@ class ContactsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Contacts 2.0',
-      theme: ThemeData(
-        primaryColor: charcoalGrey,
-        accentColor: ripePink,
-      ),
+      theme: _buildGuavaTheme(context),
       home: HomePage(),
     );
   }
+}
+
+ThemeData _buildGuavaTheme(BuildContext context) {
+  final ThemeData base = ThemeData.light();
+
+  return base.copyWith(
+    accentColor: rawGreen,
+    scaffoldBackgroundColor: obviousWhite,
+    cardColor: obviousWhite,
+    buttonColor: rawGreen,
+    textSelectionColor: ripePink,
+    textSelectionHandleColor: ripeGreen,
+    buttonTheme: ButtonThemeData(
+      textTheme: ButtonTextTheme.accent,
+    ),
+  );
 }
