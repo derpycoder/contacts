@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './shared/values/colors.dart';
+import './screens/profile.dart';
 
 class Sidebar extends StatelessWidget {
   @override
@@ -17,8 +18,8 @@ class Sidebar extends StatelessWidget {
             accountName: Text("John Doe"),
             currentAccountPicture: CircleAvatar(
               backgroundColor: rawGreen,
-              backgroundImage:
-                  AssetImage('assets/images/placeholders/green_male_avatar.png'),
+              backgroundImage: AssetImage(
+                  'assets/images/placeholders/green_male_avatar.png'),
             ),
           ),
           ListTile(
@@ -26,7 +27,12 @@ class Sidebar extends StatelessWidget {
             title: Text('Profile'),
             trailing: Icon(Icons.edit),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ProfileScreen(),
+                ),
+              );
             },
           ),
           Divider(),
