@@ -22,17 +22,14 @@ class HomePage extends StatelessWidget {
 }
 
 Widget _tabBody() {
-  return SafeArea(
-    child: TabBarView(
-      physics: BouncingScrollPhysics(),
-      children: [
-        ProfileTab(),
-        FavoritesTab(),
-        ContactsTab(),
-        Center(child: Text("Groups")),
-        Center(child: Text("Trash Can")),
-      ],
-    ),
+  return TabBarView(
+    children: [
+      Center(child: Text("Trash Can")),
+      Center(child: Text("Groups")),
+      ContactsTab(),
+      FavoritesTab(),
+      ProfileTab(),
+    ],
   );
 }
 

@@ -7,17 +7,16 @@ Widget header(Widget body) {
     headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
       return <Widget>[
         SliverAppBar(
-          snap: true,
           backgroundColor: rawGreen,
           title: _searchBar(),
           forceElevated: innerBoxIsScrolled,
           pinned: true,
           floating: true,
+          snap: true,
           bottom: _tabBar(),
           actions: <Widget>[
             _shareContact(),
           ],
-          primary: true,
         ),
       ];
     },
@@ -54,11 +53,11 @@ Widget _tabBar() {
   return TabBar(
     indicatorColor: obviousWhite,
     tabs: <Widget>[
-      Tab(icon: Icon(Icons.account_circle)),
-      Tab(icon: Icon(Icons.favorite)),
-      Tab(icon: Icon(Icons.contacts)),
-      Tab(icon: Icon(Icons.group)),
       Tab(icon: Icon(Icons.archive)),
+      Tab(icon: Icon(Icons.group)),
+      Tab(icon: Icon(Icons.contacts)),
+      Tab(icon: Icon(Icons.favorite)),
+      Tab(icon: Icon(Icons.notifications)),
     ],
   );
 }
