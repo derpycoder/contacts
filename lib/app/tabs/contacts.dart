@@ -10,7 +10,7 @@ class ContactsTab extends StatelessWidget {
         scrollDirection: Axis.vertical,
         slivers: <Widget>[
           SliverFixedExtentList(
-            itemExtent: 145.0,
+            itemExtent: 185.0,
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
                 return ContactBelt();
