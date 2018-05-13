@@ -24,11 +24,11 @@ class HomePage extends StatelessWidget {
 Widget _tabBody() {
   return TabBarView(
     children: [
-      Center(child: Text("Trash Can")),
-      Center(child: Text("Groups")),
-      ContactsTab(),
-      FavoritesTab(),
       ProfileTab(),
+      FavoritesTab(),
+      ContactsTab(),
+      Center(child: Text("Groups")),
+      Center(child: Text("Trash Can")),
     ],
   );
 }

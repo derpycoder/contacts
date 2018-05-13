@@ -15,6 +15,7 @@ Widget header(Widget body) {
           snap: true,
           bottom: _tabBar(),
           actions: <Widget>[
+            _notifications(),
             _shareContact(),
           ],
         ),
@@ -41,6 +42,14 @@ Widget _searchBar() {
   );
 }
 
+Widget _notifications() {
+  return IconButton(
+    icon: Icon(Icons.notifications),
+    tooltip: 'Notifications',
+    onPressed: () => print("Show Notifications"),
+  );
+}
+
 Widget _shareContact() {
   return IconButton(
     icon: Icon(Icons.share),
@@ -53,11 +62,11 @@ Widget _tabBar() {
   return TabBar(
     indicatorColor: obviousWhite,
     tabs: <Widget>[
-      Tab(icon: Icon(Icons.archive)),
-      Tab(icon: Icon(Icons.group)),
-      Tab(icon: Icon(Icons.contacts)),
+      Tab(icon: Icon(Icons.account_circle)),
       Tab(icon: Icon(Icons.favorite)),
-      Tab(icon: Icon(Icons.notifications)),
+      Tab(icon: Icon(Icons.contacts)),
+      Tab(icon: Icon(Icons.group)),
+      Tab(icon: Icon(Icons.archive)),
     ],
   );
 }
